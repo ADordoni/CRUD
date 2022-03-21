@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CRUD.Models.Articulo>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Precio
+            </th>            
+        </tr>
+        @foreach(var Articulo in Model)
+            {
+                <tr>
+                    <td>
+                        @Articulo.codigo
+                    </td>
+                    <td>
+                        @Articulo.descripcion
+                    </td>
+                    <td>
+                        @Articulo.precio
+                    </td>
+                    <td>
+                        <a href="/Home/Baja?cod=@Articulo.codigo">Borrar</a>
+                    </td>
+                    <td>
+                        <a href="/Home/Modificacion?cod=@Articulo.codigo">Modificar</a>
+                    </td>
+                </tr>
+            }
+    </table>
+    <a href="/Home/Alta">Agregar</a>
+</body>
+</html>

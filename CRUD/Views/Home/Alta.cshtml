@@ -1,0 +1,29 @@
+﻿@model IEnumerable<CRUD.Models.Articulo>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alta</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="/Home/Alta">
+            Código:
+            <input type="text" name="codigo" />
+            <br />
+            Descripción:
+            <input type="text" name="descripcion" />
+            <br />
+            Precio:
+            <input type="text" name="precio" />
+            <br />
+            <input type="submit" name="confirmar" />
+        </form>
+    </div>
+</body>
+</html>
